@@ -1,0 +1,9 @@
+{
+  "passwordLenMin" : 7,
+  "passwordLenMax" : 15,
+  "userAgeMin" : 16,
+  "userAgeMax" : 60,
+  "userLoginLenMin" : 1,
+  "userLoginLenMax" : 20,
+  "gender" : ["male", "female"]
+}
