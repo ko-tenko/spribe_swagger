@@ -13,9 +13,9 @@ public class RequestSpecUtils {
     static private final ConfigModel config = FileUtils.getObjectFromResourceFile("config.json", ConfigModel.class);
     static private final String baseUrl = config.getUrl();
 
-    public static RequestSpecification postSpec(String apiMethod, String editor, HashMap<String, String> params) {
+    public static RequestSpecification postSpec(String apiMethod, HashMap<String, String> params) {
         return new RequestSpecBuilder()
-                .setBaseUri(baseUrl.concat(apiMethod).concat(editor))
+                .setBaseUri(baseUrl.concat(apiMethod))
                 .setContentType(ContentType.JSON)
                 .addQueryParams(params)
                 .build();

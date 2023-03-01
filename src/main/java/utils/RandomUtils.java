@@ -30,7 +30,9 @@ public class RandomUtils {
 
     public static String generateLogin() {
         int userLoginLen = random
-                .ints(testData.getUserLoginLenMin(), testData.getUserLoginLenMax()).findFirst().getAsInt();
+                .ints(testData.getLoginLenMin(), testData.getLoginLenMax())
+                .findFirst()
+                .getAsInt();
         StringBuilder randomString = new StringBuilder();
         random.ints(65, 122)
                 .filter(i->!(i>90&&i<97))
@@ -41,8 +43,12 @@ public class RandomUtils {
         return randomString.toString();
     }
 
+    public static String generateScreenName() {
+        return generateLogin();
+    }
+
     public static Integer generateAge() {
-        return random.ints(testData.getUserAgeMin(), testData.getUserAgeMax())
+        return random.ints(testData.getAgeMin(), testData.getAgeMax())
                 .findFirst()
                 .getAsInt();
     }
