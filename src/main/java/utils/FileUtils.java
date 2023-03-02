@@ -2,7 +2,6 @@ package utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.NonNull;
-
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.net.URISyntaxException;
@@ -11,6 +10,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class FileUtils {
+
+    private FileUtils(){}
 
     public static <T> T getObjectFromResourceFile(String fileName, Class<T> clazz) {
         try {

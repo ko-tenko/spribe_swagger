@@ -2,13 +2,14 @@ package utils;
 
 import models.TestDataModel;
 import org.apache.commons.lang3.RandomStringUtils;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
 public class RandomUtils {
+
+    private RandomUtils(){}
 
     static private final TestDataModel testData = FileUtils
             .getObjectFromResourceFile("testData.json", TestDataModel.class);
