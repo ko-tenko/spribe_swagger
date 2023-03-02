@@ -16,6 +16,7 @@ public class RandomUtils {
     static private final Random random = new Random();
 
     public static String generatePassword() {
+        LoggerUtils.info("Generating password");
         String randomAlphanumeric = RandomStringUtils.randomAlphanumeric(random
                 .ints(testData.getPasswordLenMin(), testData.getPasswordLenMax() + 1)
                 .findFirst()
@@ -30,6 +31,7 @@ public class RandomUtils {
     }
 
     public static String generateLogin() {
+        LoggerUtils.info("Generating login");
         int userLoginLen = random
                 .ints(testData.getLoginLenMin(), testData.getLoginLenMax())
                 .findFirst()
@@ -45,16 +47,19 @@ public class RandomUtils {
     }
 
     public static String generateScreenName() {
+        LoggerUtils.info("Generating screenName");
         return generateLogin();
     }
 
     public static Integer generateAge() {
+        LoggerUtils.info("Generating age");
         return random.ints(testData.getAgeMin(), testData.getAgeMax())
                 .findFirst()
                 .getAsInt();
     }
 
     public static String generateGender() {
+        LoggerUtils.info("Generating gender");
         return testData.getGender(random.ints(0, 1 + 1)
                 .findFirst()
                 .getAsInt());
