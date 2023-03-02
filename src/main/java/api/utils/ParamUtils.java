@@ -1,11 +1,11 @@
 package api.utils;
 
 import java.util.HashMap;
-
-import api.ApiParamNames;
-import utils.RandomUtils;
+import api.constants.ApiParams;
 
 public class ParamUtils {
+
+    private ParamUtils(){}
 
     public static HashMap<String, String> getParamsToCreatePlayer(String login,
                                                                   String password,
@@ -14,19 +14,16 @@ public class ParamUtils {
                                                                   String role,
                                                                   String gender) {
         HashMap<String, String> playerParams = new HashMap<>();
-        playerParams.put(ApiParamNames.LOGIN, login);
-        playerParams.put(ApiParamNames.PASSWORD, password);
-        playerParams.put(ApiParamNames.SCREEN_NAME, screenName);
-        playerParams.put(ApiParamNames.AGE, age.toString());
-        playerParams.put(ApiParamNames.ROLE, role);
-        playerParams.put(ApiParamNames.GENDER, gender);
+        playerParams.put(ApiParams.LOGIN, login);
+        playerParams.put(ApiParams.PASSWORD, password);
+        playerParams.put(ApiParams.SCREEN_NAME, screenName);
+        playerParams.put(ApiParams.AGE, age.toString());
+        playerParams.put(ApiParams.ROLE, role);
+        playerParams.put(ApiParams.GENDER, gender);
         return playerParams;
     }
 
-    public static HashMap<String, String> getParamsToGetPlayer(String id) {
-        HashMap<String, String> playerParams = new HashMap<>();
-        playerParams.put("playerId", id);
-        return playerParams;
+    public static HashMap <String, String> getParamsForAllPlayers() {
+        return new HashMap<>();
     }
-
 }
