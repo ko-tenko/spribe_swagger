@@ -1,6 +1,6 @@
-package api;
+package api.constants;
 
-public class ApiPath {
+public class ApiPaths {
     public static final String ADMIN = "admin?";
     public static final String SUPERVISOR = "supervisor?";
     public static final String USER = "user?";

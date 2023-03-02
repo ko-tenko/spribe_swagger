@@ -1,6 +1,6 @@
-package api;
+package api.constants;
 
-public class ApiParamNames {
+public class ApiParams {
     public static final String AGE = "age";
     public static final String GENDER = "gender";
     public static final String LOGIN = "login";

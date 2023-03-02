@@ -1,4 +1,4 @@
-package api;
+package api.constants;
 
 public class ApiEditors {
     public static final String ADMIN = "admin";
