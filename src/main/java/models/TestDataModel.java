@@ -1,7 +1,6 @@
 package models;
 
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 import lombok.Value;
 
 import java.util.ArrayList;
@@ -16,10 +15,18 @@ public class TestDataModel {
       Integer loginLenMin;
       Integer loginLenMax;
       ArrayList<String> gender;
+      ArrayList<String> role;
 
       public String getGender(int index) {
             if (gender == null) {
-                  throw new NullPointerException("Gender list is null");
+                  throw new NullPointerException("Genders list is null");
+            }
+            return gender.get(index);
+      }
+
+      public String getRole(int index) {
+            if (gender == null) {
+                  throw new NullPointerException("Roles list is null");
             }
             return gender.get(index);
       }
