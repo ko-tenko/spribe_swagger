@@ -5,6 +5,6 @@ import lombok.Value;
 
 @Value
 @NoArgsConstructor(force = true)
-public class ConfigModel {
+public class ConfigDataModel {
     String url;
 }

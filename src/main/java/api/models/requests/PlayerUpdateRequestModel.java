@@ -1,12 +1,11 @@
-package api.models.responses;
+package api.models.requests;
 
 import lombok.Data;
 
 @Data
-public class PlayerUpdateResponseModel {
+public class PlayerUpdateRequestModel {
     private Integer age;
     private String gender;
-    private Integer id;
     private String login;
     private String password;
     private String role;
