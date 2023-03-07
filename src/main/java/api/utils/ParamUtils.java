@@ -3,25 +3,21 @@ package api.utils;
 import java.util.HashMap;
 import api.constants.ApiParams;
 import utils.LoggerUtils;
+import utils.RandomUtils;
 
 public class ParamUtils {
 
     private ParamUtils(){}
 
-    public static HashMap<String, String> getParamsToCreatePlayer(String login,
-                                                                  String password,
-                                                                  String screenName,
-                                                                  Integer age,
-                                                                  String role,
-                                                                  String gender) {
-        LoggerUtils.info("Adding parameters to create a player");
+    public static HashMap<String, String> getParamsToCreatePlayer(String role) {
+        LoggerUtils.info("Adding valid parameters to create a player");
         HashMap<String, String> playerParams = new HashMap<>();
-        playerParams.put(ApiParams.LOGIN, login);
-        playerParams.put(ApiParams.PASSWORD, password);
-        playerParams.put(ApiParams.SCREEN_NAME, screenName);
-        playerParams.put(ApiParams.AGE, age.toString());
+        playerParams.put(ApiParams.LOGIN, RandomUtils.generateLogin());
+        playerParams.put(ApiParams.PASSWORD, RandomUtils.generatePassword());
+        playerParams.put(ApiParams.SCREEN_NAME, RandomUtils.generateScreenName());
+        playerParams.put(ApiParams.AGE, RandomUtils.generateAge().toString());
         playerParams.put(ApiParams.ROLE, role);
-        playerParams.put(ApiParams.GENDER, gender);
+        playerParams.put(ApiParams.GENDER, RandomUtils.generateGender());
         return playerParams;
     }
 

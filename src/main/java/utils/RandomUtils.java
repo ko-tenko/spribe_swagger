@@ -64,4 +64,11 @@ public class RandomUtils {
                 .findFirst()
                 .getAsInt());
     }
+
+    public static String generateRole() {
+        LoggerUtils.info("Generating player's role");
+        return testData.getRole(random.ints(0, 2 + 1)
+                .findFirst()
+                .getAsInt());
+    }
 }
